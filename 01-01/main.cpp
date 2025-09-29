@@ -18,7 +18,7 @@ int main() {
 		"Hamamatucho","Shimbashi","Yurakucho"};
 
 	int forNumber = 1;
-	printf("1970Year\n");
+	printf("1970Year\n\n");
 	for (auto s : stationName) {
 		if (forNumber < 10) {
 			printf("0%d:%s\n", forNumber, s);
@@ -39,7 +39,7 @@ int main() {
 		}
 	}
 	forNumber = 1;
-	printf("2019Year\n");
+	printf("2019Year\n\n");
 	for (auto s : stationName) {
 		if (forNumber < 10) {
 			printf("0%d:%s\n", forNumber, s);
@@ -59,7 +59,7 @@ int main() {
 		}
 	}
 	forNumber = 1;
-	printf("2022Year\n");
+	printf("2022Year\n\n");
 	for (auto s : stationName) {
 		if (forNumber < 10) {
 			printf("0%d:%s\n", forNumber, s);
