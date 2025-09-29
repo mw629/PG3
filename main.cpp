@@ -1,10 +1,16 @@
 #include <iostream>
 #include <Windows.h>
+#include <list>
+#include <vector>
+
+using namespace std;
 
 int main() {
-	//SetConsoleOutputCP(65001);//これをやってもBOMなしで文字化けしないよ
-	char str[] = "ペンギン";
-	printf("%s", str);
+	
+	list<char> Station1970Year = {"Tokyo","Kanda","Akihabara","Okachimachi","Ueno","Uguisudani","Nippori"};
+	list<char> Station2019Year;
+	list<char> Station2022Year;
+
 
 
 	return 0;
