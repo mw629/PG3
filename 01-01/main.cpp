@@ -29,6 +29,7 @@ int main() {
 			forNumber++;
 		}
 	}
+	
 	printf("\n");
 
 	for (list<const char*>::iterator itr = stationName.begin(); itr != stationName.end(); ++itr) {
