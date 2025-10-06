@@ -22,7 +22,9 @@ int main() {
 	double doubleA=1.9382;
 	double doubleB=6.9373;
 
-	printf("int:%d float:%f double:%lf", Min<int>(intA, intB), Min<float>(floatA, floatB), Min<double>(doubleA, doubleB));
+	printf("int:%d\n", Min<int>(intA, intB));
+	printf("float:%f\n",Min<float>(floatA, floatB));
+	printf("double:%lf\n",Min<double>(doubleA, doubleB));
 
 	return 0;
 }
