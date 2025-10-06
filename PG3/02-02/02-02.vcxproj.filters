@@ -17,4 +17,7 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="answer02-02.md" />
+  </ItemGroup>
 </Project>
