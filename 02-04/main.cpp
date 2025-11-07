@@ -4,10 +4,10 @@
 #include <functional>
 
 
-void DelayReveal(std::function<void(int, int)> fn,
+void DelayReveal(std::function<void()> fn,
 	unsigned int delayMs, int roll, int userGuess) {
 	Sleep(delayMs);
-	fn(roll, userGuess);
+	fn();
 };
 
 int main() {
@@ -22,13 +22,13 @@ int main() {
 	printf("丁半を選んでね");
 	scanf_s("%d", &prediction);
 
-	std::function<void(int, int)> ShowResult = [=](int roll, int userGuess) {
+	std::function<void()> ShowResult = [=]() {
 
-		printf("\n-出目は[%d]でした-\n", roll);
+		printf("\n-出目は[%d]でした-\n", dice);
 
-		int result = roll % 2;
+		int result = dice % 2;
 
-		if (result == userGuess) {
+		if (result == prediction) {
 			printf("正解\n");
 		}
 		else {
