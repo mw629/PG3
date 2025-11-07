@@ -31,7 +31,7 @@ int main() {
 	int dice = 0;
 
 	srand((unsigned)time(NULL));
-	dice = rand() % 6;
+	dice = rand() % 6 + 1;
 
 	printf("丁半を選んでね");
 	scanf_s("%d", &prediction);

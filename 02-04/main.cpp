@@ -4,7 +4,11 @@
 #include <functional>
 
 
-
+void DelayReveal(std::function<void(int, int)> fn,
+	unsigned int delayMs, int roll, int userGuess) {
+	Sleep(delayMs);
+	fn(roll, userGuess);
+};
 
 int main() {
 
@@ -13,7 +17,7 @@ int main() {
 	int dice = 0;
 
 	srand((unsigned)time(NULL));
-	dice = rand() % 6;
+	dice = rand() % 6 + 1;
 
 	printf("丁半を選んでね");
 	scanf_s("%d", &prediction);
@@ -25,22 +29,17 @@ int main() {
 		int result = roll % 2;
 
 		if (result == userGuess) {
-			printf("正解");
+			printf("正解\n");
 		}
 		else {
-			printf("不正解");
+			printf("不正解\n");
 		}
 		};
 
 
-	void DelayReveal = [](std::function<void(int, int)> fn,
-		unsigned int delayMs, int roll, int userGuess) {
-			Sleep(delayMs);
-			fn(roll, userGuess);
-			return 0;
-		};
+	DelayReveal(ShowResult, 3000, dice, prediction);
 
-	DelayReveal;
+
 
 	return 0;
 }
