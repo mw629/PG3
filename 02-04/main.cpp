@@ -5,7 +5,7 @@
 
 
 void DelayReveal(std::function<void()> fn,
-	unsigned int delayMs, int roll, int userGuess) {
+	unsigned int delayMs) {
 	Sleep(delayMs);
 	fn();
 };
@@ -37,7 +37,7 @@ int main() {
 		};
 
 
-	DelayReveal(ShowResult, 3000, dice, prediction);
+	DelayReveal(ShowResult, 3000);
 
 
 
