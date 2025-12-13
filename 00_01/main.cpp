@@ -1,11 +1,11 @@
 #include <iostream>
 #include <Windows.h>
+#include <string>
+
 
 int main() {
-	//SetConsoleOutputCP(65001);//これをやってBOMなしで文字化けしないよ
-	char str[] = "ペンギン";
-	printf("%s", str);
-
+	std::string str = "ペンギン";
+	std::cout << str << std::endl;
 
 	return 0;
 }
