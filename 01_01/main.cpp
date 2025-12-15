@@ -1,21 +1,18 @@
-#include  <stdio.h> 
-#include <Windows.h>
+#include <stdio.h> 
 #include <list>
-#include <vector>
 
 using namespace std;
 
 int main() {
 
-	const int stationIndex = 30;
 
-	list<const char*> stationName= {
+	list<const char*> stationName = {
 		"Tokyo", "Kanda", "Akihabara", "Okachimachi", "Ueno",
 		"Uguisudani", "Nippori","Tabata","Komagome","Sugamo",
 		"Otuka", "Ikebukuro","Mejiro","Takadanobaba","Shin-Okubo",
 		"Shinjuku","Yoyogi","Harajuku","Shibuya","Ebisu",
 		"Meguro","Gotanda","Osaki","Shinagawa","Tamachi",
-		"Hamamatucho","Shimbashi","Yurakucho"};
+		"Hamamatucho","Shimbashi","Yurakucho" };
 
 	int forNumber = 1;
 	printf("1970Year\n\n");
@@ -29,7 +26,7 @@ int main() {
 			forNumber++;
 		}
 	}
-	
+
 	printf("\n");
 
 	for (list<const char*>::iterator itr = stationName.begin(); itr != stationName.end(); ++itr) {
@@ -54,7 +51,7 @@ int main() {
 
 	for (list<const char*>::iterator itr = stationName.begin(); itr != stationName.end(); ++itr) {
 		if (*itr == "Tamachi") {
-			itr = stationName.insert(itr, "TakanawaGateway");
+			itr = stationName.insert(itr, "Takanawa Gateway");
 			break;
 		}
 	}
