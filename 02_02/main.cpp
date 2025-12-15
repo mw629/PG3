@@ -1,4 +1,4 @@
-#include <iostream>
+#include  <stdio.h> 
 #include <Windows.h>
 
 void Salary(int total, int money, int normalTotal,int time) {
