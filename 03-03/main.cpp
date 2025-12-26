@@ -1,6 +1,19 @@
-#include "Vehicle.h"
-#include "Car.h"
-#include "Bicycle.h"
+#include "stdio.h"
+
+class Vehicle {
+public:
+	virtual void Run() {};
+};
+
+class Car :public Vehicle {
+public:
+	void Run() { printf("車:時速40km\n"); }
+};
+
+class Bicycle :public Vehicle {
+public:
+	void Run() { printf("自転車:時速15km"); }
+};
 
 int main() {
 
