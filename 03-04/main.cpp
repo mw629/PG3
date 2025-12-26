@@ -1,30 +1,45 @@
 #include <stdio.h>
 
-class Vehicle {
+class IShape {
+protected:
+
+	float size_;
 public:
-	virtual void Run()=0;
+	virtual void Size() = 0;
+	virtual void Draw() = 0;
 };
 
-class Car :public Vehicle {
+class Circle :public IShape {
+private:
+	float radius = 2.0f;
 public:
-	void Run() { printf("車 :時速40km\n"); }
+	void Size()override { size_ = radius * radius * 3.14f; };
+	void Draw() override { printf("Circle:%f\n", size_); }
 };
 
-class Bicycle :public Vehicle {
+class Rectangle :public IShape {
+	float width_ = 2.0f;
+	float height_ = 1.0f;
 public:
-	void Run() { printf("自転車 :時速15km"); }
+	void Size()override { size_ = width_ * height_; };
+	void Draw()override { printf("Rectangle:%f\n", size_); }
 };
 
 int main() {
 
-	Vehicle* vehicle[2];
+	IShape* shape[2];
 
-	vehicle[0] = new Car();
-	vehicle[1] = new Bicycle();
+	shape[0] = new Circle();
+	shape[1] = new Rectangle();
+
 
 	for (int i = 0; i < 2; i++) {
-		vehicle[i]->Run();
+		shape[i]->Size();
 	}
+	for (int i = 0; i < 2; i++) {
+		shape[i]->Draw();
+	}
+
 
 
 	return 0;
