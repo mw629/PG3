@@ -17,6 +17,8 @@ void GameScene::Initialize() {
 
 void GameScene::Update(char keys[256], char preKeys[256]) {
 
+
+
 	if (keys[DIK_SPACE] && !preKeys[DIK_SPACE]) {
 		nextSceneID_ = SceneID::Clear;
 		sceneChangeRequest_ = true;
